@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* --- LOGICA DO MENU HAMBÚRGUER --- */
+       
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 8%;
+            background: #0a1128;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .logo{
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #d4af37;
+            text-transform: uppercase;
+        }
+          .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+         .nav-links a:hover {
+            color: #d4af37;
+        
+        }
+         #menu-toggle {
+            display: none; /* Esconde o checkbox */
+        }
+
+        .menu-icon {
+            display: none; /* Esconde o ícone no desktop */
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 20px;
+        }
+
+        .menu-icon span {
+            width: 100%;
+            height: 3px;
+            background-color: #d4af37;
+            transition: 0.4s;
+            border-radius: 2px;
+        }
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+          footer {
+            background: #0a1128;
+            color: #fff; 
+            text-align: center; 
+            padding: 20px; 
+            font-size: 0.8rem;
+            }
+            .sobre{
+            padding: 100px 8%;
+            text-align: center;
+            background-color: #fcfcfc;
+             display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            }
+
+        .sobre-interno{
+             background: #fff;
+            padding: 50px 30px;
+            flex: 1 1 300px;
+            max-width: 10000px;
+            border: 1px solid #eee;
+            border-top: 5px solid #d4af37;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sobre-interno:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .sobre-interno h2{
+            margin-bottom: 20px;
+            color: #0a1128;
+            font-size: 1.4rem;
+        }
+        .sobre-interno p{
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+     <header class="navbar">
+        <div class="logo">Advocacia Prestígio</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Áreas de Atuação</a></li>
+                <li><a href="sobre.html">Sobre o Escritório</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        </header>  
+        <section class="sobre">
+            <div class="sobre-interno">
+            <h2>Sobre Nós</h2>
+            <p>Nosso escritório opera sob um modelo de advocacia de resultados, onde a técnica jurídica rigorosa encontra a visão estratégica de negócios. Especializados em Direito Civil, Tributário e de Família, atuamos através de uma estrutura consultiva e litigiosa que prioriza a agilidade processual e a mitigação de riscos. Cada demanda é submetida a uma análise minuciosa, desde a redação de contratos complexos até a defesa em execuções de dívidas e otimização fiscal empresarial. Utilizamos uma abordagem multidisciplinar para garantir que nossos clientes tenham suporte jurídico integral, assegurando que o patrimônio e os direitos de cada assistido sejam protegidos com o máximo de conformidade legal e inteligência estratégica.</p>
+           <br>
+            <p>A fundação deste escritório não foi apenas um passo profissional, mas a realização de um legado familiar que carrego no nome e na conduta. Cresci presenciando como a justiça, quando tardia ou mal interpretada, pode desestruturar o esforço de gerações e o equilíbrio de um lar. Essa vivência pessoal transformou meu olhar sobre o Direito: aqui, não tratamos apenas de números de processos, mas de histórias de vida semelhantes à minha. Minha maior motivação é impedir que o patrimônio de uma família seja dissipado por falta de planejamento ou que um direito seja silenciado por falta de voz. Atuamos com uma ética que vai além dos honorários; nossa missão é ser o porto seguro para que nossos clientes possam prosperar e cuidar dos seus, sabendo que existe um profissional que entende o valor real de cada conquista e luta por ela como se fosse sua própria herança.</p>
+         </div>
+        </section>
+
+         <footer>
+        &copy; 2026 Advocacia Prestígio. Todos os direitos reservados.
+        </footer>
+
+</body>
+</html>
