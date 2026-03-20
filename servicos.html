@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas de atuação</title>
+    <link rel="stylesheet" href="index.html">
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 8%;
+            background: #0a1128;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        } 
+          .logo{
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #d4af37;
+            text-transform: uppercase;
+        }
+         .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        } #menu-toggle {
+            display: none; /* Esconde o checkbox */
+        }
+
+        .menu-icon {
+            display: none; /* Esconde o ícone no desktop */
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 20px;
+        }
+
+        .menu-icon span {
+            width: 100%;
+            height: 3px;
+            background-color: #d4af37;
+            transition: 0.4s;
+            border-radius: 2px;
+        }   
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1.2rem 5%;
+            }
+
+            .menu-icon {
+                display: flex; /* Mostra o hambúrguer */
+                z-index: 1001;
+            }  
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%; /* Escondido fora da tela */
+                height: 100vh;
+                width: 70%;
+                background: #0a1128;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+
+            /* Quando o checkbox é marcado... */
+            #menu-toggle:checked ~ .nav-links {
+                right: 0; /* Menu entra na tela */
+            }
+
+            /* Animação das barras para o X */
+            #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+                opacity: 0;
+            }
+            #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+        }
+         .service {
+            padding: 100px 8%;
+            text-align: center;
+            background-color: #fcfcfc;
+        }
+        .service h1 {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: #0a1128;
+            position: relative;
+            padding-bottom: 15px;
+        }
+         .service h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #d4af37;
+        }
+         .grid-service {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .cards {
+            background: #fff;
+            padding: 50px 30px;
+            flex: 1 1 300px;
+            max-width: 10000px;
+            border: 1px solid #eee;
+            border-top: 5px solid #d4af37;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cards:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .cards h3 {
+            margin-bottom: 20px;
+            color: #0a1128;
+            font-size: 1.4rem;
+        }
+
+        .cards li {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+            list-style: none;
+        }
+          footer {
+            background: #0a1128;
+            color: #fff; 
+            text-align: center; 
+            padding: 20px; 
+            font-size: 0.8rem;
+            }
+
+    </style>
+</head>
+<body>
+        <header class="navbar">
+        <div class="logo">Advocacia Prestígio</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Áreas de Atuação</a></li>
+                <li><a href="sobre.html">Sobre o Escritório</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        </header>  
+        <section class="service" id="direito-civil">
+            <div id="" class="service-grid">
+                <h1>Nossas Especialidades</h1>
+                <div class="cards">
+                   <h3>Direito Civil</h3> 
+                   <ul>
+                    <li><strong>Contratos:</strong> Redação, análise e revisão de contratos de compra e venda, aluguel e prestação de serviços.</li>
+                    <li><strong>Indenizações:</strong> Ações por danos morais, danos materiais e lucros cessantes.</li>
+                    <li><strong>Recuperação de Crédito:</strong> Cobranças judiciais e extrajudiciais, execução de títulos e dívidas.</li>
+                    <li><strong>Direito Imobiliário:</strong> Problemas com escrituras, registros, usucapião, reintegração de posse e despejo.</li>
+                    <li><strong>Responsabilidade Civil:</strong> Erro médico, acidentes de trânsito e conflitos de vizinhança.</li>
+                    <li><strong>Defesa do Consumidor:</strong> Ações contra bancos, seguradoras, companhias aéreas e planos de saúde.</li>
+                   </ul>
+                </div>
+                <div class="cards">
+                    <h3>Família e Sucessões</h3>
+                    <ul>
+                        <li><strong>Divórcio e Dissolução:</strong> Processos de divórcio consensual ou litigioso e dissolução de união estável.</li>
+                        <li><strong>Guarda e Visitas:</strong> Regulamentação de guarda compartilhada ou unilateral e regime de convivência familiar.</li>
+                        <li><strong>Pensão Alimentícia:</strong> Pedido inicial de alimentos, revisão (aumento ou redução) e execução de parcelas atrasadas.</li>
+                        <li><strong>Inventários e Partilhas:</strong> Abertura de inventários judiciais e extrajudiciais (em cartório) e partilha de bens.</li>
+                        <li><strong>Planejamento Sucessório:</strong> Elaboração de testamentos, doações em vida e holdings familiares para evitar conflitos futuros.</li>
+                        <li><strong>Interdição e Curatela:</strong> Processos para proteção de pessoas incapazes de gerir os próprios atos.</li>
+                    </ul>
+                </div>
+                <div class="cards">
+                    <h3>Direito Tributário</h3>
+                    <ul>
+                        <li><strong>Recuperação de Impostos:</strong> Identificação e resgate de tributos pagos indevidamente ou a maior nos últimos 5 anos.</li>
+                        <li><strong>Planejamento Fiscal:</strong> Estratégias legais para redução da carga tributária (elisão fiscal) de empresas.</li>
+                        <li><strong>Defesa em Execuções Fiscais:</strong> Proteção do patrimônio e defesa contra cobranças da União, Estados ou Municípios.</li>
+                        <li><strong>Consultoria Preventiva:</strong> Pareceres sobre a legalidade de operações comerciais e interpretação de normas fiscais.</li>
+                        <li><strong>Parcelamentos e Refis:</strong> Orientação e adesão a programas de parcelamento de débitos tributários.</li>
+                        <li><strong>Impostos Específicos:</strong> Gestão de conflitos envolvendo ICMS, ISS, IRPJ, CSLL, PIS/COFINS e IPI.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <footer>
+        &copy; 2026 Advocacia Prestígio. Todos os direitos reservados.
+        </footer>
+
+</body>
+</html>
